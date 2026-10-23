@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: vossa-excelencia
+    runtime: static
+    buildCommand: node build.js
+    staticPublishPath: ./public
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
